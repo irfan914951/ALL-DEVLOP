@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Prediction Hub | Mir Irfan</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f3f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    header img {
+      width: 80px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 10px 0 5px;
+      color: #1a73e8;
+      font-size: 26px;
+    }
+    header p {
+      color: #555;
+    }
+    h3 {
+      color: #444;
+      border-left: 5px solid #1a73e8;
+      padding-left: 10px;
+      margin-top: 30px;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    .telegram-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #0088cc;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      margin: 15px 0;
+      transition: 0.3s;
+      animation: pulse 1.5s infinite;
+    }
+    .telegram-btn:hover { background: #006fa6; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0,136,204,0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(0,136,204,0); }
+      100% { box-shadow: 0 0 0 0 rgba(0,136,204,0); }
+    }
+    .counter {
+      font-size: 18px;
+      font-weight: bold;
+      color: #1a73e8;
+      text-align: center;
+      margin: 15px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+    th {
+      background: #1a73e8;
+      color: white;
+    }
+    tr:hover {
+      background-color: #f1f7ff;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 13px;
+      color: #777;
+    }
+    /* Popup */
+    .popup {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #1a73e8;
+      color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease;
+      z-index: 1000;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .popup a {
+      background: #fff;
+      color: #1a73e8;
+      padding: 10px 15px;
+      border-radius: 8px;
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="https://i.ibb.co/xfgGp38/game-logo.jpg" alt="Game Prediction Hub Logo">
+      <h1>🎯 Game Prediction Hub</h1>
+      <p>Powered by <strong>Mir Irfan</strong> | Expert Game Signal Provider</p>
+    </header>
+
+    <a class="telegram-btn" href="https://t.me/Alldevlope21" target="_blank">📱 Join @Alldevlope21 on Telegram</a>
+
+    <div class="counter">🔥 Today's Winning Signals: <span id="signalCount">0</span>+ | 👥 Members: <span id="memberCount">500</span>+</div>
+
+    <h3>Recent Winning Signals</h3>
+    <p><strong>Aviator Win:</strong> 🚀 Cash-out at 2.5x! Perfect prediction by Mir Irfan.</p>
+    <img src="https://i.ibb.co/kHx0cGr/aviator.jpg" alt="Aviator Win Screenshot">
+
+    <p><strong>Dragon Tiger Win:</strong> 🐉 Tiger side dominates – win confirmed!</p>
+    <img src="https://i.ibb.co/f82K8C6/dragon-tiger.jpg" alt="Dragon Tiger Win">
+
+    <p><strong>Quick Game Win:</strong> ⚡ Double bet profit within seconds!</p>
+    <img src="https://i.ibb.co/Y7HKz1G/quick-game.jpg" alt="Quick Game Win">
+
+    <h3>📊 Signal History</h3>
+    <table>
+      <tr>
+        <th>Date</th>
+        <th>Game</th>
+        <th>Prediction</th>
+        <th>Result</th>
+        <th>Status</th>
+      </tr>
+      <tr>
+        <td>Nov 10, 2025</td>
+        <td>Aviator</td>
+        <td>2.5x Cash Out</td>
+        <td>2.6x</td>
+        <td>✅ Win</td>
+      </tr>
+      <tr>
+        <td>Nov 09, 2025</td>
+        <td>Dragon Tiger</td>
+        <td>Tiger</td>
+        <td>Tiger</td>
+        <td>✅ Win</td>
+      </tr>
+      <tr>
+        <td>Nov 09, 2025</td>
+        <td>Roulette</td>
+        <td>Red 7</td>
+        <td>Red 7</td>
+        <td>✅ Win</td>
+      </tr>
+      <tr>
+        <td>Nov 08, 2025</td>
+        <td>Slots</td>
+        <td>Jackpot Spin</td>
+        <td>Jackpot!</td>
+        <td>✅ Win</td>
+      </tr>
+    </table>
+
+    <h3>🎰 More Winning Predictions</h3>
+    <img src="https://i.ibb.co/Wkt7ShD/roulette.jpg" alt="Roulette Win">
+    <img src="https://i.ibb.co/BfrsKQy/slots.jpg" alt="Slots Win">
+    <img src="https://i.ibb.co/qRx7kGQ/baccarat.jpg" alt="Baccarat Win">
+    <img src="https://i.ibb.co/DVqVTRF/poker.jpg" alt="Poker Win">
+
+    <h3>🚀 Get Free Daily Predictions</h3>
+    <p>Join our <a href="https://t.me/Alldevlope21" target="_blank">Telegram Channel</a> for instant game signals and daily wins!</p>
+
+    <footer>
+      <p><em>Disclaimer: Predictions are for entertainment only. Gamble responsibly.</em><br>
+      © 2025 Game Prediction Hub | Managed by Mir Irfan</p>
+    </footer>
+  </div>
+
+  <div class="popup" id="popup">
+    <strong>🎯 Free Winning Signals Waiting!</strong><br>
+    Join now on Telegram 👇
+    <br>
+    <a href="https://t.me/Alldevlope21" target="_blank">Join @Alldevlope21</a>
+  </div>
+
+  <script>
+    // Live Signal Counter
+    let count = 0;
+    const counter = document.getElementById('signalCount');
+    const interval = setInterval(() => {
+      if (count < 127) {
+        count++;
+        counter.textContent = count;
+      } else {
+        clearInterval(interval);
+      }
+    }, 30);
+
+    // Live Member Counter
+    let members = 500;
+    const memberCounter = document.getElementById('memberCount');
+    setInterval(() => {
+      members += Math.floor(Math.random() * 3);
+      memberCounter.textContent = members;
+    }, 2000);
+
+    // Popup after 5 seconds
+    setTimeout(() => {
+      document.getElementById('popup').style.display = 'block';
+    }, 5000);
+  </script>
+</body>
+</html>
